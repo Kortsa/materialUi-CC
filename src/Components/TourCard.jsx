@@ -11,7 +11,6 @@ const theme = createTheme({
   components: {
     MuiTypography: {
       variants: [
-       
         {
           props: {
             variant: "body2",
@@ -33,19 +32,15 @@ const theme = createTheme({
   },
 });
 
-function TourCard({tour}) {
+function TourCard({ tour }) {
   return (
     <Grid item xs={3}>
       <ThemeProvider theme={theme}>
         <Paper elevation={3}>
-          <img
-            src={tour.image}
-            alt=""
-            className="img"
-          />
+          <img src={tour.image} alt="" className="img" />
           <Box paddingX={2}>
             <Typography variant="subtitle1" component="h2">
-             {tour.name}
+              {tour.name}
             </Typography>
             <Box
               sx={{
@@ -78,10 +73,10 @@ function TourCard({tour}) {
                 readOnly
               />
               <Typography variant="body2" component="p" marginLeft={0.5}>
-               {tour.rating}
+                {tour.rating}
               </Typography>
               <Typography variant="body3" component="p" marginLeft={1.5}>
-              ({tour.numberOfReviews} reviews)
+                ({tour.numberOfReviews} reviews)
               </Typography>
             </Box>
 
